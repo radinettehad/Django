@@ -1,0 +1,14 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <p>قیمت: {{ product.price }} تومان</p>
+    <p>دسته‌بندی: {{ product.category }}</p>
+    <a href="{% url 'product_list' %}">بازگشت به لیست محصولات</a>
+</body>
+</html>

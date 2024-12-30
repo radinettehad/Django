@@ -1,0 +1,23 @@
+
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>لیست محصولات</title>
+</head>
+<body>
+    <h1>لیست محصولات</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="جستجو...">
+        <button type="submit">جستجو</button>
+    </form>
+    <ul>
+    {% for product in products %}
+        <li><a href="{% url 'product_detail' product.id %}">{{ product.name }} - {{ product.price }} تومان</a></li>
+
+    {% endfor %}
+    </ul>
+</body>
+</html>

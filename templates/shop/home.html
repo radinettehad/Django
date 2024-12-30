@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>فروشگاه آنلاین</title>
+</head>
+<body>
+    <h1>به فروشگاه آنلاین ما خوش آمدید!</h1>
+    <h2>محصولات موجود:</h2>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <ul>
+        {% for product in products %}
+            <li><a href="{% url 'product_detail' product.id %}">{{ product.name }} - {{ product.price }} تومان</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
